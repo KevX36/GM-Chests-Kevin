@@ -95,31 +95,151 @@ public class chestDrops : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            //setting chests as inactive
+            woodChest.gameObject.SetActive(false);
+            bronzeChest.gameObject.SetActive(false);
+            sliverChest.gameObject.SetActive(false);
+            goldChest.gameObject.SetActive(false);
+            platnumChest.gameObject.SetActive(false);
+            //setting items as inactive
+            commonItem.gameObject.SetActive(false);
+            uncommonItem.gameObject.SetActive(false);
+            rareItem.gameObject.SetActive(false);
+            epicItem.gameObject.SetActive(false);
+            legendItem.gameObject.SetActive(false);
             int chestRoll = Random.Range(1, chestTotal);
-            if (chestRoll >= woodDropRate)
+            if (chestRoll <= woodDropRate)
             {
                 int itemRoll = Random.Range(1, woodTotal);
                 woodChest.gameObject.SetActive(true);
+                if (itemRoll <= woodCommon)
+                {
+                    commonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= woodCommon + woodUncommon)
+                {
+                    uncommonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= woodCommon + woodUncommon+woodRare)
+                {
+                    rareItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= woodCommon + woodUncommon + woodRare+woodEpic)
+                {
+                    epicItem.gameObject.SetActive(true);
+                }
+                else
+                {
+                    legendItem.gameObject.SetActive(true);
+                }
+
+
+
+
+
+
+
+
             }
-            else if (chestRoll >= woodDropRate+bronzeDropRate)
+            else if (chestRoll <= woodDropRate +bronzeDropRate)
             {
                 int itemRoll = Random.Range(1, bronzeTotal);
                 bronzeChest.gameObject.SetActive(true);
+                if (itemRoll <= bronzeCommon)
+                {
+                    commonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= bronzeCommon + bronzeUncommon)
+                {
+                    uncommonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= bronzeCommon + bronzeUncommon + bronzeRare)
+                {
+                    rareItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= bronzeCommon + bronzeUncommon + bronzeRare + bronzeEpic)
+                {
+                    epicItem.gameObject.SetActive(true);
+                }
+                else
+                {
+                    legendItem.gameObject.SetActive(true);
+                }
             }
-            else if (chestRoll >= woodDropRate + bronzeDropRate+sliverDropRate)
+            else if (chestRoll <= woodDropRate + bronzeDropRate+sliverDropRate)
             {
                 int itemRoll = Random.Range(1, sliverTotal);
                 sliverChest.gameObject.SetActive(true);
+                if (itemRoll <= sliverCommon)
+                {
+                    commonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= sliverCommon + sliverUncommon)
+                {
+                    uncommonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= sliverCommon + sliverUncommon + sliverRare)
+                {
+                    rareItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= sliverCommon + sliverUncommon + sliverRare + sliverEpic)
+                {
+                    epicItem.gameObject.SetActive(true);
+                }
+                else
+                {
+                    legendItem.gameObject.SetActive(true);
+                }
             }
-            else if (chestRoll >= woodDropRate + bronzeDropRate + sliverDropRate+goldDropRate)
+            else if (chestRoll <= woodDropRate + bronzeDropRate + sliverDropRate+goldDropRate)
             {
                 int itemRoll = Random.Range(1, goldTotal);
                 goldChest.gameObject.SetActive(true);
+                if (itemRoll <= goldCommon)
+                {
+                    commonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= goldCommon + goldUncommon)
+                {
+                    uncommonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= goldCommon + goldUncommon + goldRare)
+                {
+                    rareItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= goldCommon + goldUncommon + goldRare + goldEpic)
+                {
+                    epicItem.gameObject.SetActive(true);
+                }
+                else
+                {
+                    legendItem.gameObject.SetActive(true);
+                }
             }
             else
             {
                 int itemRoll = Random.Range(1, platnumTotal);
                 platnumChest.gameObject.SetActive(true);
+                if (itemRoll <= platnumCommon)
+                {
+                    commonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= platnumCommon + platnumUncommon)
+                {
+                    uncommonItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= platnumCommon + platnumUncommon + platnumRare)
+                {
+                    rareItem.gameObject.SetActive(true);
+                }
+                else if (itemRoll <= platnumCommon + platnumUncommon + platnumRare + platnumEpic)
+                {
+                    epicItem.gameObject.SetActive(true);
+                }
+                else
+                {
+                    legendItem.gameObject.SetActive(true);
+                }
             }
 
 
